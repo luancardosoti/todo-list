@@ -132,6 +132,7 @@ Error generating stack: `+l.message+`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 
   div {
     display: flex;
@@ -142,6 +143,9 @@ Error generating stack: `+l.message+`
 
     strong {
       font-size: 0.875rem;
+      @media screen and (max-width: 360px) {
+        width: min-content;
+      }
     }
 
     span {
@@ -150,6 +154,7 @@ Error generating stack: `+l.message+`
       color: ${e=>e.theme.gray100};
       padding: 0.125rem 0.5rem;
       border-radius: 9999px;
+      white-space: nowrap;
     }
 
     &.todoCreatedContainer strong {
@@ -229,5 +234,6 @@ Error generating stack: `+l.message+`
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    padding: 0 1rem;
   }
 `;function $0(){const[e,t]=ne.exports.useState([]),n=ne.exports.useCallback(l=>{t(i=>[...i,{description:l,finished:!1}])},[]),r=ne.exports.useCallback(l=>{t(i=>{const u=[...i];return u.splice(l,1),u})},[]),o=ne.exports.useCallback(l=>{t(i=>{const u=i[l];if(!u)return i;const s=[...i];return s.splice(l,1,{...u,finished:!u.finished}),s})},[]);return oe(U0,{children:[C(L0,{}),oe("main",{children:[C(E0,{onCreateTodo:n}),C(F0,{todos:e,onDeleteTodo:r,onUpdateTodo:o})]})]})}function V0(){return oe(u0,{theme:f0,children:[C($0,{}),C(c0,{})]})}bl.createRoot(document.getElementById("root")).render(C(fn.StrictMode,{children:C(V0,{})}));
