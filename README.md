@@ -25,6 +25,7 @@ The author of this layout is [Millena Kupsinskü Martins](https://www.figma.com/
 - [ReactJS](https://reactjs.org/)
 - [Vite](https://vitejs.dev)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Styled components](https://styled-components.com/)
 
 ## 💻 Getting started
 
