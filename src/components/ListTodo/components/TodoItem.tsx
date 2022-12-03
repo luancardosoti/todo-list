@@ -1,10 +1,10 @@
 import { Trash } from 'phosphor-react'
 
-import { Todo } from '../../../App'
 import { TodoItemContainer } from '../style'
 
 import imgCheck from '../../../assets/check.png'
 import imgUncheck from '../../../assets/uncheck.png'
+import { Todo } from '../../../pages/Home'
 
 interface TodoItemProps {
   todo: Todo

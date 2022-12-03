@@ -1,4 +1,4 @@
-import { Todo } from '../../App'
+import { Todo } from '../../pages/Home'
 import { EmptyListTodo } from './components/EmptyListTodo'
 import { HeaderListTodo } from './components/HeaderListTodo'
 import { TodoItem } from './components/TodoItem'
@@ -13,7 +13,10 @@ interface ListTodoProps {
 
 export function ListTodo({ todos, onDeleteTodo, onUpdateTodo }: ListTodoProps) {
   const todoCreatedCount = todos.length
-  const todoFinishedCount = todos.filter((todo) => todo.finished).length
+  const todoFinishedCount = todos.reduce(
+    (acc, todo) => (todo.finished ? acc + 1 : acc),
+    0,
+  )
 
   return (
     <ListTodoContainer>

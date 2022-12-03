@@ -9,6 +9,9 @@ export function HeaderListTodo({
   todoCreatedCount,
   todoFinishedCount,
 }: HeaderListTodoProps) {
+  const todoFinishedContent =
+    todoCreatedCount > 0 ? `${todoFinishedCount} de ${todoCreatedCount}` : '0'
+
   return (
     <HeaderListTodoContainer>
       <div className="todoCreatedContainer">
@@ -18,7 +21,7 @@ export function HeaderListTodo({
 
       <div className="todoFinishedContainer">
         <strong>Tarefas Concluídas</strong>
-        <span>{todoFinishedCount}</span>
+        <span>{todoFinishedContent}</span>
       </div>
     </HeaderListTodoContainer>
   )
