@@ -1,8 +1,10 @@
 import { useCallback, useState } from 'react'
 
-import { Form } from '../../components/Form'
 import { Header } from '../../components/Header'
+import { Form } from '../../components/Form'
 import { ListTodo } from '../../components/ListTodo'
+import { Footer } from '../../components/Footer'
+
 import { HomeContainer } from './style'
 
 export interface Todo {
@@ -56,6 +58,7 @@ export function Home() {
           onUpdateTodo={onUpdateTodo}
         />
       </main>
+      <Footer />
     </HomeContainer>
   )
 }

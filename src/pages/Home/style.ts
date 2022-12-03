@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
-  padding-bottom: 2rem;
-
   main {
     max-width: 46rem;
     margin: 0 auto;
@@ -10,5 +8,6 @@ export const HomeContainer = styled.div`
     flex-direction: column;
     gap: 4rem;
     padding: 0 1rem;
+    padding-bottom: 2rem;
   }
 `
