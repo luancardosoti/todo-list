@@ -17,6 +17,7 @@ export const HeaderListTodoContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 
   div {
     display: flex;
@@ -27,6 +28,9 @@ export const HeaderListTodoContainer = styled.header`
 
     strong {
       font-size: 0.875rem;
+      @media screen and (max-width: 360px) {
+        width: min-content;
+      }
     }
 
     span {
@@ -35,6 +39,7 @@ export const HeaderListTodoContainer = styled.header`
       color: ${(props) => props.theme.gray100};
       padding: 0.125rem 0.5rem;
       border-radius: 9999px;
+      white-space: nowrap;
     }
 
     &.todoCreatedContainer strong {

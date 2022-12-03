@@ -9,5 +9,6 @@ export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    padding: 0 1rem;
   }
 `
