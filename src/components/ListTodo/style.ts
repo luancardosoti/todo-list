@@ -76,9 +76,6 @@ export const TodoItemContainer = styled.li<TodoItemContainerProps>`
   align-items: flex-start;
   gap: 0.75rem;
 
-  .iconFinished {
-  }
-
   p {
     width: 100%;
     line-height: 140%;
@@ -94,14 +91,25 @@ export const TodoItemContainer = styled.li<TodoItemContainerProps>`
     border: 0;
     background: none;
     cursor: pointer;
-    width: 1.5rem;
-    height: 1.5rem;
 
-    svg {
-      color: ${(props) => props.theme.gray300};
+    &.deleteButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: .25rem;
+      border-radius: 4px;
 
+      transition: all ease .2s;
+
+      svg {
+        color: ${(props) => props.theme.gray300};
+      }
+      
       :hover {
-        color: ${(props) => props.theme.red500};
+        background-color:  ${(props) => props.theme.gray400};
+        svg {
+          color: ${(props) => props.theme.red500};
+        }
       }
     }
   }

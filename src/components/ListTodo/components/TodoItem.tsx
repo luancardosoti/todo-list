@@ -26,7 +26,7 @@ export function TodoItem({
         )}
       </button>
       <p>{todo.description}</p>
-      <button onClick={handleDeleteTodo}>
+      <button className="deleteButton" onClick={handleDeleteTodo}>
         <Trash size={16} />
       </button>
     </TodoItemContainer>

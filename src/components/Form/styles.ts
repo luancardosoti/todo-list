@@ -12,11 +12,16 @@ export const FormContainer = styled.form`
     background-color: ${(props) => props.theme.gray500};
     border: 1px solid ${(props) => props.theme.gray700};
     color: ${(props) => props.theme.gray100};
+    outline: none;
 
     ::placeholder {
       font-size: 1rem;
       color: ${(props) => props.theme.gray300};
       line-height: 140%;
+    }
+
+    :focus {
+      border-color: ${(props) => props.theme.purple700};
     }
   }
 
